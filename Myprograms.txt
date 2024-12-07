@@ -1,0 +1,349 @@
+Program:
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string ak= " ";
+		Console.WriteLine("Enter your name");
+		ak= Console.ReadLine();
+		Console.WriteLine(ak);
+	}
+}
+
+
+Output: 
+Enter your name
+akash kumar shakya
+akash kumar shakya
+*******************************************************************************************************************
+Program : 
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int a,b,c;
+	
+		Console.WriteLine("Enter value of a");
+		a = Convert.ToInt32(Console.ReadLine());
+		
+        Console.WriteLine("Enter value of b");
+		b = Convert.ToInt32(Console.ReadLine());
+		
+		c=a+b;
+		Console.WriteLine("sum is: " + c);
+	
+	}
+}
+
+o/p: 
+
+Enter value of a
+4
+Enter value of b
+6
+sum is: 10
+
+*******************************************************************************************************************
+
+Program : 
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string name= " ";
+		int a;
+	
+		Console.WriteLine("Enter your name");
+		name= Console.ReadLine();
+		
+        Console.WriteLine("Enter your age");
+		a= Convert.ToInt32(Console.ReadLine());
+		
+		if(a>=18)
+		{
+			Console.WriteLine(name +" " + "Your are eligible for voting");
+		}
+		else
+		{
+			Console.WriteLine(name + "Your are not eligible for voting");
+		}
+			
+	
+	}
+}
+
+o/p-: 
+Enter your name
+Akash
+Enter your age
+43
+Akash Your are eligible for voting
+
+*******************************************************************************************************************
+
+Program : 
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int num;
+		int i;
+		for(i=0; i<=5; i++)
+		{
+			Console.WriteLine("Enter your" + i+ "th value");
+			num=Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine(num);
+		}
+		
+	
+	}
+}
+
+o/p: 
+Enter your0th value
+4
+4
+Enter your1th value
+6
+6
+Enter your2th value
+8
+8
+Enter your3th value
+4
+4
+Enter your4th value
+9
+9
+Enter your5th value
+3
+3
+
+*******************************************************************************************************************
+
+
+Program : 
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int num,sum=0;
+		int i;
+		for(i=0; i<=5; i++)
+		{
+			Console.WriteLine("Enter your" + i+ "th value");
+			num=Convert.ToInt32(Console.ReadLine());
+			sum=sum+num;
+			
+		}
+		
+		Console.WriteLine("Sum is : "+sum);
+	
+	}
+}
+
+o/p : 
+Enter your0th value
+1
+Enter your1th value
+2
+Enter your2th value
+3
+Enter your3th value
+4
+Enter your4th value
+5
+Enter your5th value
+6
+Sum is : 21
+
+*******************************************************************************************************************
+
+Program : 
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	int i=0,n=5;
+	int num=1;
+	for(i=1; i<=n; i++)
+	{
+		num=num*i;
+	}
+		Console.WriteLine(num);
+	}
+}
+
+o/p : 
+120
+
+*******************************************************************************************************************
+
+Program : 
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int f1=1;
+		int f2=1;
+		int f3=0;
+		Console.Write(f1 + ",");
+		Console.Write(f2 + ",");
+		for(int i=2; i<=10; i++)
+		{
+			f3=f1+f2;
+			f1=f2;
+			f2=f3;
+			
+			Console.Write(f3 + ",");
+		}
+
+	}
+}
+
+o/p: 
+1,1,2,3,5,8,13,21,34,55,89,
+
+*******************************************************************************************************************
+
+Program : BOXING AND UNBOXING
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int i=10;
+		object obj=0;
+		obj=i;    //BOXING
+		Console.WriteLine(obj);
+		
+		int j=0;
+		j=(int)obj; //UNBOXING
+		Console.WriteLine(obj);
+
+	}
+}
+
+o/p : 
+10
+10
+
+*******************************************************************************************************************
+
+Program : Addition of two numbers by using Method
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+       int a,b;
+	   Console.WriteLine("Enter the value of a and b");
+	   a= Convert.ToInt32(Console.ReadLine());
+	   b= Convert.ToInt32(Console.ReadLine());
+	   Console.WriteLine(Add(a,b));
+	}
+	
+	public static int Add(int x,int y)
+	{
+		return x+y;
+	}
+}
+
+o/p : 
+Enter the value of a and b
+3
+3
+6
+
+*******************************************************************************************************************
+
+Program : By reference swap
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+       int a,b;
+	   Console.WriteLine("Enter the value of a and b");
+	   a= Convert.ToInt32(Console.ReadLine());
+	   b= Convert.ToInt32(Console.ReadLine());
+	   Console.WriteLine("Before swapping: a={0} b={1}",a,b);
+	   
+		Swap(ref a, ref b);
+	
+	   Console.WriteLine("Before swapping: a={0} b={1}",a,b);
+	}
+	
+	public static void Swap(ref int x, ref int y)
+	{
+		int temp;
+		temp=x;
+		x=y;
+		y=temp;
+	}
+}
+
+o/p : 
+Enter the value of a and b
+3
+4
+Before swapping: a=3 b=4
+Before swapping: a=4 b=3
+
+*******************************************************************************************************************
+
+Program : 
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+       int a,b,c=0,d;
+	   Console.WriteLine("Enter the value of a and b");
+	   a= Convert.ToInt32(Console.ReadLine());
+	   b= Convert.ToInt32(Console.ReadLine());
+	   c=Operations(a,b, out d);
+	   Console.WriteLine("Add = {0}", c);
+	   Console.WriteLine("mul = {0}", d);
+	}
+	
+	public static int Operations(int x, int y, out int z)
+	{
+		z=x*y;
+		return x+y;
+	}
+}
+
+o/p: 
+Enter the value of a and b
+6
+5
+Add = 11
+mul = 30
+
+*******************************************************************************************************************
